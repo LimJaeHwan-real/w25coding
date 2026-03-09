@@ -54,7 +54,7 @@ def combinations(n, k):
         ## 2. 탐색(Explore)
         ## 3. 취소(Unchoose)
         for i in range(start,n+1):
-            if i>=start:
+            #if i>=start:
                 current_combination.append(i)
                 backtrack(i+1,current_combination)
                 current_combination.pop()

@@ -54,8 +54,6 @@ def merge(arr, left, mid, right):
         i+=1
 
     
-
-
     # TODO: 남은 원소들을 복사
     # left_arr에 남은 원소가 있으면 복사
     # right_arr에 남은 원소가 있으면 복사
@@ -84,7 +82,7 @@ def merge_sort_helper(arr, left, right):
     ## 오른쪽 절반 재귀 정렬
     ## 정렬된 두 절반을 병합
     if left<right:
-        mid=left+(right-left)//2
+        mid=(left+right)//2
         merge_sort_helper(arr, left, mid)
         merge_sort_helper(arr, mid+1, right)
         merge(arr,left,mid,right)

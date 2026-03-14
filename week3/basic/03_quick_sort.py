@@ -34,25 +34,42 @@ def partition(arr, low, high):
     Returns:
         피벗의 최종 위치 인덱스
     """
-    # TODO: 피벗을 선택 (일반적으로 마지막 원소)
+    # 1번째 방법 -> 너무 많은 swap 일어남
+    # # TODO: 피벗을 선택 (일반적으로 마지막 원소)
+    # pivot=arr[high]
+    
+    # # TODO: i는 작은 원소들의 마지막 인덱스를 추적
+    # i=low-1
+    
+    # # TODO: low부터 high-1까지 순회하면서
+    # ## 현재 원소가 피벗보다 작거나 같으면:
+    # ##   1. i를 1 증가
+    # ##   2. arr[i]와 arr[j]를 교환
+    # for j in range(low,high):
+    #     if arr[j]<=pivot:
+    #         i+=1
+    #         arr[i],arr[j]=arr[j],arr[i]
+    
+    # # TODO: 피벗을 올바른 위치(i+1)에 배치
+    # arr[i+1],arr[high]=arr[high],arr[i+1]
+    # return i + 1
+
+    # 2번째 방법
     pivot=arr[high]
+    l=low
+    r=high-1
+    while True:
+        while l<=r and arr[l]<=pivot:
+            l+=1
+        while l<=r and arr[r]>pivot:
+            r-=1
+        if l>r:
+            break
+        arr[l],arr[r]=arr[r],arr[l]
+            
+    arr[l],arr[high]=arr[high],arr[l]
+    return l
     
-    # TODO: i는 작은 원소들의 마지막 인덱스를 추적
-    i=low-1
-    
-    # TODO: low부터 high-1까지 순회하면서
-    ## 현재 원소가 피벗보다 작거나 같으면:
-    ##   1. i를 1 증가
-    ##   2. arr[i]와 arr[j]를 교환
-    for j in range(low,high):
-        if arr[j]<=pivot:
-            i+=1
-            arr[i],arr[j]=arr[j],arr[i]
-    
-    # TODO: 피벗을 올바른 위치(i+1)에 배치
-    arr[i+1],arr[high]=arr[high],arr[i+1]
-    
-    return i + 1
 
 def quick_sort_helper(arr, low, high):
     """

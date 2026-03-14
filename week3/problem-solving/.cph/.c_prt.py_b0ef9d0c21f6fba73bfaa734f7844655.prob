@@ -1,0 +1,1 @@
+{"name":"Local: c_prt","url":"/home/shawn/w25coding/week3/problem-solving/c_prt.py","tests":[{"id":1773410635510,"input":"3\n1 2 3\n1 3 2","output":"2 1 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/shawn/w25coding/week3/problem-solving/c_prt.py","group":"local","local":true}

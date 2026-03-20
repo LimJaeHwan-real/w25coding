@@ -27,6 +27,7 @@
 - 딕셔너리 사용: {정점: [연결된 정점들]}
 - 무방향 그래프는 양방향 추가
 """
+from collections import defaultdict
 
 def create_graph(vertices, edges, directed=False):
     """
@@ -41,12 +42,20 @@ def create_graph(vertices, edges, directed=False):
         그래프 딕셔너리
     """
     # TODO: 빈 그래프 초기화
-    pass
+    graph=defaultdict(list)
+    for i in range(vertices):
+        graph[i]
     
     # TODO: 간선 추가
     ## 간선 추가 (u에서 v로)
     ## 무방향 그래프면 반대 방향도 추가
-    pass
+    for u,v in edges:
+        if not directed:
+            graph[u].append(v)
+            graph[v].append(u)
+        else:
+            graph[u].append(v)
+        
     
     return graph
 

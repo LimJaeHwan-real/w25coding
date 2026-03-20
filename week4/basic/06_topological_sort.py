@@ -26,7 +26,7 @@
 - 큐 사용
 """
 
-from collections import deque
+from collections import deque,defaultdict
 
 def topological_sort(vertices, edges):
     """
@@ -39,21 +39,34 @@ def topological_sort(vertices, edges):
     Returns:
         위상 정렬 순서
     """
+    q=deque()
     # TODO: 그래프와 진입 차수 초기화
-    pass
+    graph=defaultdict(list)
+    for i in range(vertices):
+        graph[i]
+
+    in_degree=[0]*vertices
     
     # TODO: 그래프 구성 및 진입 차수 계산
-    pass
+    for u in range(vertices):
+        for v in graph[u]:
+            in_degree[v]+=1
     
     # TODO: 진입 차수가 0인 정점들을 큐에 추가
-    pass
+    for i in range(vertices):
+        if in_degree[i]==0:
+            q.append(i)
     
     result = []
     
     # TODO: 큐가 빌 때까지 반복
     ## 큐에서 정점 꺼내기
     ## 인접한 정점들의 진입 차수 감소
-    pass
+    while q:
+        pop=q.popleft()
+        result.append(pop)
+        for adj_v in graph[pop]:
+            in_degree[adj_v]-=1
     
     return result
 

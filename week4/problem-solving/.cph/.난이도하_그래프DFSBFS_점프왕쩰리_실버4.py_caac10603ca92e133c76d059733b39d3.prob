@@ -1,0 +1,1 @@
+{"name":"Local: 난이도하_그래프DFSBFS_점프왕쩰리_실버4","url":"/home/shawn/w25coding/week4/problem-solving/난이도하_그래프DFSBFS_점프왕쩰리_실버4.py","tests":[{"id":1774074356357,"input":"3\n1 1 10\n1 5 1\n2 2 -1","output":"HaruHaru"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/shawn/w25coding/week4/problem-solving/난이도하_그래프DFSBFS_점프왕쩰리_실버4.py","group":"local","local":true}

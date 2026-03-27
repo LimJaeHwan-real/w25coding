@@ -94,3 +94,6 @@ dmypy.json
 *.swo
 *~
 
+# cph extension
+.cph/
+*.prob
